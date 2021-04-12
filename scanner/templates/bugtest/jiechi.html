@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)https://v3.bootcss.com/examples/dashboard/ -->
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="https://v3.bootcss.com/favicon.ico">
+
+    <title>Dashboard</title>
+    <!-- Bootstrap core CSS -->
+    <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="/static/dashboard.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/fontawesome/css/font-awesome.min.css">
+    <style>
+        .test{
+            color: firebrick;
+        }
+    </style>
+</head>
+
+<body>
+{#页头#}
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/index">首页</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li ><a href="/info/who_is/">信息收集</a></li>
+                <li class="active"><a href="/fuckcms">漏洞检测</a></li>
+                <li><a href="/cms">cms安全检测</a></li>
+                <li><a href="https://v3.bootcss.com/examples/dashboard/#">Help</a></li>
+            </ul>
+            <form class="navbar-form navbar-right">
+                <input type="text" class="form-control" placeholder="Search...">
+            </form>
+        </div>
+    </div>
+</nav>
+{#页头结束#}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+            <ul class="nav nav-sidebar">
+                <li class="#" ><a href="/jsfuck">解码工具检测</a></li>
+                <li class="#" ><a href="/nmap">端口漏洞检测</a></li>
+                <li class="#" ><a href="/fuckcms">sql注入检测</a></li>
+                <li ><a href="/information">信息泄露检测</a></li>
+                <li class="active"><a href="/bugtest/jiechi/">点击劫持检测</a></li>
+                <li><a href="/system">system安全检测</a></li>
+                <li class="#" ><a href="/hardware">物联网安全检测</a></li>
+                <li class="#" ><a href="/industrial">工业安全检测</a></li>
+            </ul>
+        </div>
+
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <h1 class="page-header">点击劫持检测页面</h1>
+
+            <div class="panel panel-primary">
+                <!-- Default panel contents -->
+                <div class="panel-heading">点击劫持 <i class="fa fa-thumb-tack pull-right"></i></div>
+                <div class="panel-body">
+                    <div class="row" style="margin-bottom: 15px">
+
+                        <form class="form-horizontal">
+                            <div class="form-group">
+                                <label for="author-name" class="col-sm-2 col-sm-offset-1 control-label">检测站点
+                                    >></label>
+                                <div class="col-sm-6  text-center">
+                                    <input type="text" class="form-control" id="author-name"
+                                           placeholder="例：http://www.baidu.com/"
+                                           name="arg">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <button id ="btn" type="button" class="btn btn-info">运行</button>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="page-header">
+                            <h4>查询结果：</h4>
+                        </div>
+                    <div id="test">
+                        <div id="test1">
+                        
+                        </div>
+                        <div id="test2">
+                        
+                        </div>
+                         <div id="test3">
+                        
+                        </div>
+                        <div id="test4">
+                        
+                        </div>
+                    </div>
+
+
+                    </div><!-- /.row -->
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="/static/jquery-3.2.1.min.js"></script>
+<script src="/static/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    var btn = document.getElementById("btn");
+    var myModal = document.getElementById("myModal");
+    btn.onclick = function() {
+            test.style.display = "none";
+            setTimeout(function(){
+                test.style.display = "block";
+                test1.innerHTML ='<h4>用户信息</h4>';
+                test2.innerHTML ='<h5>邮箱**</h5>';
+                test3.innerHTML = '<h5>密码**</h5>';
+                test4.innerHTML = '<button type="button" class="btn btn-primary">保存</button>';
+            }
+        , 3000) ;
+        }
+</script>
+</body>
+</html>
